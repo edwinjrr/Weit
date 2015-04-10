@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="HO5-Th-6f7">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+    </dependencies>
+    <scenes>
+        <!--Exercises View Controller-->
+        <scene sceneID="fZb-BB-udK">
+            <objects>
+                <tableViewController id="0Wd-xs-h8e" customClass="ExercisesViewController" customModule="Weit" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Tsl-Mr-Upv">
+                        <rect key="frame" x="0.0" y="64" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="detailDisclosureButton" indentationWidth="10" reuseIdentifier="ExercisesCell" textLabel="5Jb-1m-YFk" detailTextLabel="ZYX-x1-Sey" style="IBUITableViewCellStyleSubtitle" id="ZOL-TO-9uI">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ZOL-TO-9uI" id="MRP-u0-Yvf">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="5Jb-1m-YFk">
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ZYX-x1-Sey">
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <color key="tintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <segue destination="xeN-55-eJR" kind="presentation" identifier="EditExercise" trigger="accessoryAction" id="OQ0-bQ-rYE"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="0Wd-xs-h8e" id="cmP-9t-5AQ"/>
+                            <outlet property="delegate" destination="0Wd-xs-h8e" id="RDi-3l-Lqf"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="AE3-Hw-0Us">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="mvc-dZ-YYW">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <segue destination="xeN-55-eJR" kind="presentation" identifier="AddExercise" id="LLc-Vq-Epa"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
+                    <connections>
+                        <segue destination="hnF-PR-vCC" kind="show" identifier="ShowSets" id="5BF-F5-u6W"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZRf-Q4-iTs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1985" y="475"/>
+        </scene>
+        <!--Sets View Controller-->
+        <scene sceneID="Klh-zr-ve9">
+            <objects>
+                <viewController id="hnF-PR-vCC" customClass="SetsViewController" customModule="Weit" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="YEY-LQ-fyr"/>
+                        <viewControllerLayoutGuide type="bottom" id="puU-NB-E7V"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="2gy-6O-6Ne">
+                        <rect key="frame" x="0.0" y="64" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="000" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wyz-Rj-ZBH">
+                                <rect key="frame" x="218" y="395" width="164" height="120"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="100"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gWp-oc-kZS">
+                                <rect key="frame" x="141" y="125" width="50" height="40"/>
+                                <state key="normal" image="arrowDown">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="setOneDown:" destination="hnF-PR-vCC" eventType="touchUpInside" id="bOt-yo-SfI"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PqU-e6-Jka">
+                                <rect key="frame" x="405" y="125" width="50" height="40"/>
+                                <state key="normal" image="arrowUp">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="setOneUp:" destination="hnF-PR-vCC" eventType="touchUpInside" id="HfB-9H-eI1"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qnc-3A-IEQ">
+                                <rect key="frame" x="405" y="435" width="50" height="40"/>
+                                <state key="normal" image="arrowUp">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="setThreeUp:" destination="hnF-PR-vCC" eventType="touchUpInside" id="wRz-6r-Z5G"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="000" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zUH-ty-xY0">
+                                <rect key="frame" x="218" y="240" width="164" height="120"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="100"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mRG-qh-f4a">
+                                <rect key="frame" x="141" y="435" width="50" height="40"/>
+                                <state key="normal" image="arrowDown">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="setThreeDown:" destination="hnF-PR-vCC" eventType="touchUpInside" id="zts-p4-sJh"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tG3-ez-p7q">
+                                <rect key="frame" x="141" y="280" width="50" height="40"/>
+                                <state key="normal" image="arrowDown">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="setTwoDown:" destination="hnF-PR-vCC" eventType="touchUpInside" id="Swa-SQ-ZJO"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wf3-7l-3So">
+                                <rect key="frame" x="405" y="280" width="50" height="40"/>
+                                <state key="normal" image="arrowUp">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="setTwoUp:" destination="hnF-PR-vCC" eventType="touchUpInside" id="RSU-AI-OIx"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="000" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gu7-xa-ZUR">
+                                <rect key="frame" x="218" y="85" width="164" height="120"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="100"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="Wyz-Rj-ZBH" firstAttribute="leading" secondItem="mRG-qh-f4a" secondAttribute="trailing" constant="27" id="0uq-24-U5j"/>
+                            <constraint firstItem="gu7-xa-ZUR" firstAttribute="leading" secondItem="gWp-oc-kZS" secondAttribute="trailing" constant="27" id="25V-2k-fPV"/>
+                            <constraint firstItem="zUH-ty-xY0" firstAttribute="leading" secondItem="tG3-ez-p7q" secondAttribute="trailing" constant="27" id="4LD-cV-xeh"/>
+                            <constraint firstAttribute="centerY" secondItem="tG3-ez-p7q" secondAttribute="centerY" id="6a3-Lr-kjc"/>
+                            <constraint firstAttribute="centerX" secondItem="Wyz-Rj-ZBH" secondAttribute="centerX" id="6hb-aH-tja"/>
+                            <constraint firstItem="Wyz-Rj-ZBH" firstAttribute="top" secondItem="zUH-ty-xY0" secondAttribute="bottom" constant="35" id="AQG-q9-ojR"/>
+                            <constraint firstItem="PqU-e6-Jka" firstAttribute="leading" secondItem="gu7-xa-ZUR" secondAttribute="trailing" constant="23" id="BSD-bP-eZB"/>
+                            <constraint firstItem="Wf3-7l-3So" firstAttribute="top" secondItem="PqU-e6-Jka" secondAttribute="bottom" constant="115" id="CHw-4j-wS3"/>
+                            <constraint firstItem="zUH-ty-xY0" firstAttribute="top" secondItem="gu7-xa-ZUR" secondAttribute="bottom" constant="35" id="ECv-ys-Xep"/>
+                            <constraint firstAttribute="centerY" secondItem="zUH-ty-xY0" secondAttribute="centerY" id="Iw2-MQ-GAO"/>
+                            <constraint firstAttribute="centerY" secondItem="Wf3-7l-3So" secondAttribute="centerY" id="QOI-pq-mPc"/>
+                            <constraint firstItem="qnc-3A-IEQ" firstAttribute="top" secondItem="Wf3-7l-3So" secondAttribute="bottom" constant="115" id="Xur-Lf-VJK"/>
+                            <constraint firstAttribute="centerX" secondItem="gu7-xa-ZUR" secondAttribute="centerX" id="azz-p6-k2p"/>
+                            <constraint firstItem="mRG-qh-f4a" firstAttribute="top" secondItem="tG3-ez-p7q" secondAttribute="bottom" constant="115" id="jYn-px-Dhs"/>
+                            <constraint firstItem="tG3-ez-p7q" firstAttribute="top" secondItem="gWp-oc-kZS" secondAttribute="bottom" constant="115" id="mYp-jX-L6n"/>
+                            <constraint firstItem="qnc-3A-IEQ" firstAttribute="leading" secondItem="Wyz-Rj-ZBH" secondAttribute="trailing" constant="23" id="rB5-2y-RQA"/>
+                            <constraint firstAttribute="centerX" secondItem="zUH-ty-xY0" secondAttribute="centerX" id="tZb-k2-E59"/>
+                            <constraint firstItem="Wf3-7l-3So" firstAttribute="leading" secondItem="zUH-ty-xY0" secondAttribute="trailing" constant="23" id="xh5-rC-lup"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="vyJ-ij-7fg">
+                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="hm5-0U-C2e">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="resetWeight:" destination="hnF-PR-vCC" id="7SS-04-gyv"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
+                    <connections>
+                        <outlet property="setOne" destination="gu7-xa-ZUR" id="CKu-lh-qbq"/>
+                        <outlet property="setThree" destination="Wyz-Rj-ZBH" id="cKH-H6-ffN"/>
+                        <outlet property="setTwo" destination="zUH-ty-xY0" id="Uod-kk-qiw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tdX-Cj-7HF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2658" y="475"/>
+        </scene>
+        <!--Add Exercise-->
+        <scene sceneID="4OO-F0-8Gj">
+            <objects>
+                <tableViewController id="N5h-7c-0ob" customClass="ExerciseDetailViewController" customModule="Weit" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="tfK-2e-L5Z">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <sections>
+                            <tableViewSection id="arZ-gT-UUu">
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="0ah-nv-4gX">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0ah-nv-4gX" id="DnX-oM-0oN">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Name of the Exercise" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ozw-kq-kuM">
+                                                    <rect key="frame" x="8" y="8" width="584" height="30"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                                                    <connections>
+                                                        <action selector="done" destination="N5h-7c-0ob" eventType="editingDidEndOnExit" id="IFw-xe-5lg"/>
+                                                        <outlet property="delegate" destination="N5h-7c-0ob" id="1N6-ln-pgf"/>
+                                                    </connections>
+                                                </textField>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="N5h-7c-0ob" id="pqw-po-w9r"/>
+                            <outlet property="delegate" destination="N5h-7c-0ob" id="smb-aj-ekn"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Add Exercise" id="j7e-1T-Bgb">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="Wu3-KP-nU4">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="cancel" destination="N5h-7c-0ob" id="ST1-Zw-8q9"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" enabled="NO" systemItem="done" id="zoU-Pb-dfJ">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="done" destination="N5h-7c-0ob" id="LJ7-Vh-Ay8"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
+                    <connections>
+                        <outlet property="doneBarButton" destination="zoU-Pb-dfJ" id="dK5-MR-JRx"/>
+                        <outlet property="textField" destination="Ozw-kq-kuM" id="i88-Jk-k96"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dfB-IT-4av" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1985" y="1899"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="x2f-MY-xzG">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="HO5-Th-6f7" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="5Nz-Bh-Tvf">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="0Wd-xs-h8e" kind="relationship" relationship="rootViewController" id="HHn-so-3CX"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GOp-46-qbo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1289" y="475"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="318-fL-FGb">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="xeN-55-eJR" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="U4p-Ok-Cch">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="N5h-7c-0ob" kind="relationship" relationship="rootViewController" id="O79-0b-0rN"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NPM-St-u8U" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1985" y="1185"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="arrowDown" width="50" height="40"/>
+        <image name="arrowUp" width="50" height="40"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="OQ0-bQ-rYE"/>
+    </inferredMetricsTieBreakers>
+    <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+</document>
