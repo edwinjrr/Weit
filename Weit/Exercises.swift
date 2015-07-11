@@ -18,8 +18,8 @@ class Exercises: NSObject, NSCoding {
     }
     
     required init(coder aDecoder: NSCoder) {
-        name = aDecoder.decodeObjectForKey("Name") as String
-        weight = aDecoder.decodeObjectForKey("Weight") as Array
+        name = aDecoder.decodeObjectForKey("Name") as! String
+        weight = aDecoder.decodeObjectForKey("Weight") as! Array
         super.init()
     }
     

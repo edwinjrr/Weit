@@ -25,24 +25,17 @@ class ExercisesViewController: UITableViewController, ExerciseDetailViewControll
         tableView.reloadData()
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return dataModel.exercises.count
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCellWithIdentifier("ExercisesCell") as UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("ExercisesCell") as! UITableViewCell
 
         let item = dataModel.exercises[indexPath.row]
         cell.textLabel!.text = item.name
         cell.detailTextLabel!.text = "\(item.weight[0])" + " - \(item.weight[1]) - " + "\(item.weight[2])"
-        
-//      configureTextForCell(cell, withChecklistItem: item)
         
         return cell
     }
@@ -60,7 +53,7 @@ class ExercisesViewController: UITableViewController, ExerciseDetailViewControll
     }
     
     func configureTextForCell(cell: UITableViewCell, withChecklistItem item: Exercises) {
-        let label = cell.viewWithTag(1001) as UILabel
+        let label = cell.viewWithTag(1001) as! UILabel
         label.text = item.name
     }
     
@@ -92,20 +85,20 @@ class ExercisesViewController: UITableViewController, ExerciseDetailViewControll
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "AddExercise" {
-            let navigationController = segue.destinationViewController as UINavigationController
-            let controller = navigationController.topViewController as ExerciseDetailViewController
+            let navigationController = segue.destinationViewController as! UINavigationController
+            let controller = navigationController.topViewController as! ExerciseDetailViewController
             controller.delegate = self
         } else if segue.identifier == "EditExercise" {
-            let navigationController = segue.destinationViewController as UINavigationController
-            let controller = navigationController.topViewController as ExerciseDetailViewController
+            let navigationController = segue.destinationViewController as! UINavigationController
+            let controller = navigationController.topViewController as! ExerciseDetailViewController
             controller.delegate = self
             
-            if let indexPath = tableView.indexPathForCell(sender as UITableViewCell) {
+            if let indexPath = tableView.indexPathForCell(sender as! UITableViewCell) {
                 controller.itemToEdit = dataModel.exercises[indexPath.row]
             }
         } else if segue.identifier == "ShowSets" {
-            let controller = segue.destinationViewController as SetsViewController
-            controller.exercises = sender as Exercises
+            let controller = segue.destinationViewController as! SetsViewController
+            controller.exercises = sender as! Exercises
         }
     }
 }
