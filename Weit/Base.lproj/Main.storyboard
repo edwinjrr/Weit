@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="HO5-Th-6f7">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Exercises View Controller-->
@@ -202,8 +203,9 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0ah-nv-4gX" id="DnX-oM-0oN">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Name of the Exercise" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ozw-kq-kuM">
-                                                    <rect key="frame" x="8" y="8" width="584" height="30"/>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Name of the Exercise" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ozw-kq-kuM">
+                                                    <rect key="frame" x="8" y="8" width="584" height="27"/>
+                                                    <color key="tintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                                                     <connections>
@@ -212,6 +214,12 @@
                                                     </connections>
                                                 </textField>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Ozw-kq-kuM" firstAttribute="trailing" secondItem="DnX-oM-0oN" secondAttribute="trailingMargin" id="1Od-RB-TxF"/>
+                                                <constraint firstItem="Ozw-kq-kuM" firstAttribute="top" secondItem="DnX-oM-0oN" secondAttribute="topMargin" id="5rM-Jj-QZe"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="Ozw-kq-kuM" secondAttribute="bottom" id="E7R-4O-5Mw"/>
+                                                <constraint firstItem="Ozw-kq-kuM" firstAttribute="leading" secondItem="DnX-oM-0oN" secondAttribute="leadingMargin" id="iyJ-Ou-XDR"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </cells>
